@@ -32,13 +32,9 @@ def on_button_click(event):
     else:
         entry.insert(tk.END, button_text)
 
-
-
-
-
 # Create the main application window
 root = tk.Tk()
-root.title("Scientific Calculator")
+root.title(" Calculator ")
 
 # Entry widget to display and input expressions
 entry = tk.Entry(root, font="Arial 20")

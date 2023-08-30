@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 # Function to add a task
-def add_task():
+def create_task():
     task = entry.get()
     if task:
         listbox.insert(tk.END, task)
@@ -10,16 +10,8 @@ def add_task():
     else:
         messagebox.showwarning("Warning", " Please enter a task to add .")
 
-# Function to remove a selected task
-def remove_task():
-    try:
-        selected_task_index = listbox.curselection()[0]
-        listbox.delete(selected_task_index)
-    except IndexError:
-        messagebox.showwarning("Warning", "Please select a task to remove.")
-
 # Function to view tasks
-def view_tasks():
+def track_tasks():
     tasks = listbox.get(0, tk.END)
     if tasks:
         tasks_str = "\n".join(tasks)
@@ -51,20 +43,16 @@ entry = tk.Entry(root, width=30)
 entry.pack(pady=15)
 
 # Add task button
-add_butn = tk.Button(root, text="Add Task", command = add_task)
-add_butn.pack()
-
-# Remove task button
-remove_butn = tk.Button(root, text="Remove Task", command = remove_task)
-remove_butn.pack()
+create_butn = tk.Button(root, text="Create Task", command = create_task)
+create_butn.pack()
 
 # Edit task button
 update_butn = tk.Button(root, text="Update Task", command = update_task)
 update_butn.pack()
 
 # View tasks button
-view_butn = tk.Button(root, text="View Tasks", command = view_tasks)
-view_butn.pack()
+track_butn = tk.Button(root, text="Track Tasks", command = track_tasks)
+track_butn.pack()
 
 # Listbox to display tasks
 listbox = tk.Listbox(root, width=40)

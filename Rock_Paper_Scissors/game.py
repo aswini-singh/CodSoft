@@ -3,12 +3,12 @@ import random
 def play_game():
     user_score = 0
     computer_score = 0
-    print("Welcome to Rock-Paper-Scissors Game!\n")
+    print("\nWelcome to Rock-Paper-Scissors Game!\n")
     
-    rounds_to_play = int(input("Enter the number of rounds you want to play: "))
+    rounds_to_play = int(input("Enter the number of rounds you want to play : "))
     
     for _ in range(rounds_to_play):
-        print("Enter your choice:\n1. Rock\n2. Paper\n3. Scissors\n")
+        print("\nEnter your choice:\n1. Rock\n2. Paper\n3. Scissors\n")
         choice = int(input("User's turn: "))
 
         while choice < 1 or choice > 3:
@@ -50,9 +50,9 @@ def play_game():
         print(f"User Score: {user_score}, Computer Score: {computer_score}")
 
     if user_score > computer_score :
-        print("Congratulations! User wins the game..")
+        print("\nCongratulations! User wins the game..")
     elif user_score < computer_score:
-        print(f"Sorry!! Better luck next time..")
+        print("\nSorry!! Better luck next time..")
     else :
         print("it's tie...")
 
@@ -60,8 +60,8 @@ def play_game():
 while True:
     play_game()
     
-    play_again = input("Do you want to play again? (Y/N): ")
+    play_again = input("\nDo you want to play again? (Y/N): ")
     if play_again.lower() != 'y':
         break
 
-print("Thanks for playing the game!")
+print("\nThanks for playing the game!")

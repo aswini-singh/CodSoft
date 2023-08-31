@@ -56,7 +56,6 @@ def play_game():
     else :
         print("it's tie...")
 
-
 while True:
     play_game()
     

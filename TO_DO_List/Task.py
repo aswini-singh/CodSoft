@@ -39,19 +39,19 @@ root = tk.Tk()
 root.title(" To-Do List ")
 
 # Entry widget for adding tasks
-entry = tk.Entry(root, width=30)
+entry = tk.Entry(root, width=30,fg ="cyan" , bg = "black", font = ("Arial",18))
 entry.pack(pady=15)
 
 # Add task button
-create_butn = tk.Button(root, text="Create Task", command = create_task)
+create_butn = tk.Button(root, text="Create Task", command=create_task, fg="dark red",font=("Arial", 18))
 create_butn.pack()
 
 # Edit task button
-update_butn = tk.Button(root, text="Update Task", command = update_task)
+update_butn = tk.Button(root, text="Update Task", command = update_task,fg = "magenta",font= ("Arial" , 18))
 update_butn.pack()
 
 # View tasks button
-track_butn = tk.Button(root, text="Track Tasks", command = track_tasks)
+track_butn = tk.Button(root, text="Track Tasks", command = track_tasks,fg= "brown" , font =("Arial",18))
 track_butn.pack()
 
 # Listbox to display tasks

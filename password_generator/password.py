@@ -3,12 +3,12 @@ import string
 import tkinter as tk
 from tkinter import messagebox
 
-char = '@#$&*_'
-password=""
+special_chars = '@#$&*_'
 pw_visible = False
+password=""
 
 def generate_password(length=12):
-    chars = string.ascii_letters + string.digits + char
+    chars = string.ascii_letters + string.digits + special_chars
     password = ''.join(random.choice(chars) for _ in range(length))
     return password
 
@@ -16,18 +16,18 @@ def password_visible():
     global pw_visible
     pw_visible = not pw_visible
     if pw_visible:
-        password.entry.comfig(show="")
+        password_entry.config(show="")
         show_butn.config(text="Hide Password")
         password_entry.delete(0,tk.END)
         password_entry.insert(0,password)
     else:
-        password_entry.config(show="")
+        password_entry.config(show="*")
         show_butn.config(text="Show Password")
         password_entry.delete(0,tk.END)
         password_entry.insert(0,'*'*len(password))
 
 def generate_pw_butn():
-    global password,password_visible
+    global password,pw_visible
     try:
         length = int(length_entry.get())
         if length <= 0:
@@ -36,13 +36,13 @@ def generate_pw_butn():
             password= generate_password(length)
             password_entry.delete(0,tk.END)
             password_entry.insert(0,'*' * len(password))
-            show_button.config(state='normal')
-            password_visible = False
+            show_butn.config(state='normal')
+            pw_visible = False
     except ValueError:
-        messagebox.showerror("Error","Invalid Input.Plz enter a valid number for password length`   q")
+        messagebox.showerror("Error","Invalid Input.Plz enter a valid number for password length")
 
 root = tk.Tk()
-root.title = "Password Generator"
+root.title("Password Generator")
 
 length_label = tk.Label(root,text = "Enter Password Length")
 length_label.grid(row=0 , column=0,sticky="w")
@@ -58,5 +58,9 @@ password_entry.grid(row=1,column=1,columnspan=2,sticky="w")
 
 show_butn = tk.Button(root,text='Show Password',command= password_visible ,state = "disabled",fg ='brown',
               font = ("Arial",12,"bold"))
+show_butn.grid(row=2,column=0,columnspan=4)
+
 pw_visible = False
+
+root.mainloop()
         

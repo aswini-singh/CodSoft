@@ -27,14 +27,14 @@ def play_game():
         print(choice_name + " vs. " + computer_choice_name)
 
         if (choice == 1 and computer_choice == 2) or (choice == 2 and computer_choice == 1):
-            print("Paper wins!")
             result = "Paper"
+
         elif (choice == 2 and computer_choice == 3) or (choice == 3 and computer_choice == 2):
-            print("Scissors wins!")
             result = "Scissors"
+
         elif (choice == 1 and computer_choice == 3) or (choice == 3 and computer_choice == 1):
-            print("Rock wins!")
             result = "Rock"
+
         else:
             result = "Tie"
 
@@ -50,9 +50,9 @@ def play_game():
         print(f"User Score: {user_score}, Computer Score: {computer_score}")
 
     if user_score > computer_score :
-        print(f"computer_score is {computer_score} and user_score is {user_score}, so User wins!!")
+        print("Congratulations! User wins the game..")
     elif user_score < computer_score:
-        print(f"user_score is {user_score} and computer score is {computer_score}, so Computer wins!! Better luck next time..")
+        print(f"Sorry!! Better luck next time..")
     else :
         print("it's tie...")
 

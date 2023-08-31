@@ -44,7 +44,15 @@ def generate_pw_butn():
 root = tk.Tk()
 root.title("Password Generator")
 
-length_label = tk.Label(root,text = "Enter Password Length")
+window_width = 350
+window_height = 100
+screen_width =root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+x = (screen_width/2) - (window_width/2)
+y = (screen_height/2) - (window_height/2)
+root.geometry(f'{window_width}x{window_height}+{int(x)}+{int(y)}')
+
+length_label = tk.Label(root,text = "Enter Password Length",fg="blue",font=("Arial",15,"bold"))
 length_label.grid(row=0 , column=0,sticky="w")
 
 length_entry = tk.Entry(root)

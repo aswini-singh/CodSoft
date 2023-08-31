@@ -57,6 +57,6 @@ password_entry = tk.Entry(root,show ="")
 password_entry.grid(row=1,column=1,columnspan=2,sticky="w")
 
 show_butn = tk.Button(root,text='Show Password',command= password_visible ,state = "disabled",fg ='brown',
-              font = ("Arial",12,bold))
+              font = ("Arial",12,"bold"))
 pw_visible = False
         

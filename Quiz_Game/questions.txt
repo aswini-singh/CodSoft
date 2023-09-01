@@ -13,22 +13,22 @@ How do you comment a single line in Python?
 # This is a comment
 /* This is a comment */
 option: B 
-What does the print() function do in Python?.
+What does the print() function do in Python?
 Display output on the screen
 Take user input
 Perform mathematical calculations
 option: B 
-Which data type is used to store a sequence of characters in Python?.
+Which data type is used to store a sequence of characters in Python?
 int
 list
 str
 option: C
-How do you define a function in Python?.
+How do you define a function in Python?
 func my_function():
 def my_function():
 define my_function():
 option: B
-What is the result of the expression 4 + 3 * 5 in Python?.
+What is the result of the expression 4 + 3 * 5 in Python?
 19
 23
 60
@@ -38,17 +38,17 @@ x*y*z
 1*1*1
 *111 
 option: B
-A function definition starts with the keyword ?.
+A function definition starts with the keyword ?
 Def 
 func 
 def
 option: C 
-What are the four fundamental elements that make a language ?.
+What are the four fundamental elements that make a language ?
 An alphabet,phonetics ,phonology and semantics
 An alphabet,a lexis ,a syntax and semantics
 An alphabet,a lexis ,phonetics and semantics
 option: B 
-What do you call a tool that lets you lanch your code step-by-step and inspect it at each moment of execution?.
+What do you call a tool that lets you lanch your code step-by-step and inspect it at each moment of execution?
 debugger 
 A console 
 An editor 

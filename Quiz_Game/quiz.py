@@ -12,7 +12,7 @@ class QuizGame:
             i = 0
             while i < len(lines):
                 question_line = lines[i]
-                if question_line.endswith('?'):
+                if question_line.endswith(''):
                     question = {"question": question_line, "options": [], "correct_answer": ""}
                     i += 1
                     while i < len(lines) and not lines[i].startswith("option: "):

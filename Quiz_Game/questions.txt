@@ -1,0 +1,90 @@
+The Python programming language was created by Guido van Rossum in which year?
+1990
+2000
+1980
+option: A
+What is Python?
+A type of snake
+A data structure
+A high-level programming language
+option: C
+How do you comment a single line in Python?
+// This is a comment
+# This is a comment
+/* This is a comment */
+option: B 
+What does the print() function do in Python?.
+Display output on the screen
+Take user input
+Perform mathematical calculations
+option: B 
+Which data type is used to store a sequence of characters in Python?.
+int
+list
+str
+option: C
+How do you define a function in Python?.
+func my_function():
+def my_function():
+define my_function():
+option: B
+What is the result of the expression 4 + 3 * 5 in Python?.
+19
+23
+60
+option: A 
+If z = y = x = 1,than What is the expected output of the print(x, y, z, sep='*') ?
+x*y*z 
+1*1*1
+*111 
+option: B
+A function definition starts with the keyword ?.
+Def 
+func 
+def
+option: C 
+What are the four fundamental elements that make a language ?.
+An alphabet,phonetics ,phonology and semantics
+An alphabet,a lexis ,a syntax and semantics
+An alphabet,a lexis ,phonetics and semantics
+option: B 
+What do you call a tool that lets you lanch your code step-by-step and inspect it at each moment of execution?.
+debugger 
+A console 
+An editor 
+option: A
+If x=1, y=2 than x,y,z=x,x,y ; z,y,z=x,y,z What is the expected output of the print(x, y, z)?
+1 2 2
+1 2 1
+1 1 2
+option: C
+what is the output of -13//2+15//2 ?
+1
+0
+-1
+option: B
+Tuples are enclosed in _______.
+curly braces 
+square brackets
+parentheses
+option: C 
+Sets in Python are _______.
+mutable
+immutable
+unmutable 
+option: B
+To find the length of a string, you can use the _______ function.
+length  
+range
+len
+option: C
+Keys in a dictionary must be _______.
+unique 
+different
+pairs
+option: A
+To add an element to the end of a list, you can use the _______ method.
+add 
+append 
+pop
+option: B 

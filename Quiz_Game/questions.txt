@@ -63,28 +63,13 @@ what is the output of -13//2+15//2 ?
 0
 -1
 option: B
-Tuples are enclosed in _______.
-curly braces 
-square brackets
-parentheses
-option: C 
-Sets in Python are _______.
-mutable
-immutable
-unmutable 
-option: B
-To find the length of a string, you can use the _______ function.
-length  
-range
-len
-option: C
-Keys in a dictionary must be _______.
-unique 
-different
-pairs
-option: A
-To add an element to the end of a list, you can use the _______ method.
-add 
-append 
-pop
-option: B 
+[FILL]To find the length of a string, you can use the _______ function.
+correct_answer: len
+[FILL]Tuples are enclosed in _______.
+correct_answer: parentheses
+[FILL]Sets in Python are _______. 
+correct_answer: immutable
+[FILL]Keys in a dictionary must be _______.
+correct_answer: unique
+[FILL]To add an element to the end of a list, you can use the _______ method.
+correct_answer: append

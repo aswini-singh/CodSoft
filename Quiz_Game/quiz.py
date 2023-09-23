@@ -12,7 +12,16 @@ class QuizGame:
             i = 0
             while i < len(lines):
                 question_line = lines[i]
-                if question_line.endswith(''):
+                if question_line.startswith("[FILL]"):
+                    question = {"question": question_line[6:], "correct_answer": ""}
+                    i += 1
+                    while i < len(lines) and not lines[i].startswith("correct_answer: "):
+                        i += 1
+                    if i < len(lines):
+                        question["correct_answer"] = lines[i][15:]
+                        i += 1
+                    self.questions.append(question)
+                elif question_line.endswith('?'):
                     question = {"question": question_line, "options": [], "correct_answer": ""}
                     i += 1
                     while i < len(lines) and not lines[i].startswith("option: "):
@@ -24,6 +33,7 @@ class QuizGame:
                     self.questions.append(question)
                 else:
                     i += 1
+
 
     def shuffle_questions(self):
         random.shuffle(self.questions)
@@ -39,10 +49,10 @@ class QuizGame:
         else:
             print(f"Wrong! The correct answer is {question_data['correct_answer']}.")
             return False
-
     def ask_fill_in_the_blank_question(self, question_data):
         user_answer = input(f"{question_data['question']}\nYour answer: ").strip().lower()
-        if user_answer == question_data['correct_answer'].lower():
+        correct_answer = question_data['correct_answer'].strip().lower()  # Remove extra spaces
+        if user_answer == correct_answer:
             print("Correct!")
             return True
         else:
@@ -54,7 +64,7 @@ class QuizGame:
         print("Welcome to the Quiz Game!")
         print("Rules:")
         print("1. Answer multiple-choice questions with A, B, or C.")
-        print("2. For fill-in-the-blank questions, with A, B, or C.")
+        print("2. For fill-in-the-blank questions, enter your answer.")
         print("Let's begin!\n")
 
         for question_data in self.questions:
